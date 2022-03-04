@@ -66,7 +66,9 @@ public class Aro {
     }
 
     public void trasladarCentro(int trasladarx, int trasladary){
-        coordenadaX=coordenadaX + trasladarx;
-        coordenadaY=coordenadaY + trasladary;
+        this.coordenadaX=this.coordenadaX + trasladarx;
+        this.coordenadaY=this.coordenadaY + trasladary;
     }
+    
+    
 }
