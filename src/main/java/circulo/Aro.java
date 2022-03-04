@@ -6,6 +6,26 @@ package circulo;
  */
 public class Aro {
 
+    
+
+    private static final double LIMITERADIO = 0.0;
+    public static final double MINIMO = LIMITERADIO;
+    
+
+    private int coordenadaX;
+    private int coordenadaY;
+    private double radio;
+
+    public Aro() {
+    }
+
+    public Aro(int valorX, int valorY, double valorRadio) {
+        coordenadaX = valorX;
+        coordenadaY = valorY;
+        setRadio(valorRadio);
+    }
+
+    
     /**
      * @return the coordenadaX
      */
@@ -45,49 +65,7 @@ public class Aro {
      * @param radio the radio to set
      */
     public void setRadio(double radio) {
-        this.radio = radio;
-    }
-
-    private static final double LIMITERADIO = 0.0;
-    public static final double MINIMO = LIMITERADIO;
-    
-
-    private int coordenadaX;
-    private int coordenadaY;
-    private double radio;
-
-    public Aro() {
-    }
-
-    public Aro(int valorX, int valorY, double valorRadio) {
-        coordenadaX = valorX;
-        coordenadaY = valorY;
-        establecerRadio(valorRadio);
-    }
-
-    public void establecerX(int valorX) {
-        setCoordenadaX(valorX);
-    }
-
-    public int obterX() {
-        return getCoordenadaX();
-    }
-
-    public void establecerY(int valorY) {
-        setCoordenadaY(valorY);
-    }
-
-    public int obterY() {
-        return getCoordenadaY();
-    }
-
-    public void establecerRadio(double valorRadio) {
-
-        setRadio(valorRadio < MINIMO ? MINIMO : valorRadio);
-    }
-
-    public double obterRadio() {
-        return getRadio();
+        this.radio =(radio < MINIMO ? MINIMO : radio);
     }
 
     public double obterDiametro() {
